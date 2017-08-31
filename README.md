@@ -1,3 +1,13 @@
+download the project and then
+CLI:
+npm i
+npm serve
+
+default browser preview:
+
+![image](https://github.com/zts117/ionic-init-a-app/blob/master/descript-img/1.png)
+![image](https://github.com/zts117/ionic-init-a-app/blob/master/descript-img/2.png)
+
 # Ionic Conference Application
 
 This is purely a demo of Ionic with TypeScript. It is still in development.
