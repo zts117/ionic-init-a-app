@@ -1,0 +1,89 @@
+<ion-header class="toobar-bg">
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <div class="avatar-left">
+                <div class="avatar">
+                    <img src="./assets/img/app/avatar.jpg" alt="头像">
+                </div>
+            </div>
+        </button>
+        <ion-title>Speakers</ion-title>
+        <ion-buttons end>
+            <button class="right-fsize14" ion-button icon-only (click)="presentPopover($event)">
+              更多
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="outer-content speaker-list">
+    <ion-list [virtualScroll]="speakers">
+        <ion-item item-inner class="item-box list-bottom" *virtualItem="let speaker">
+            <ion-thumbnail item-start class="list-img-radius">
+                <img [src]="speaker.profilePic" alt="Speaker profile pic">
+            </ion-thumbnail>
+            <h2>{{speaker.name}}</h2>
+            <p>Hello my name is {{speaker.name}} !</p>
+            <div class="item-box-right" item-end>
+                <div class="right-time">{{speaker.sessions[0].timeStart}}</div>
+                <ion-badge class=" badge badge-ios badge-bgcolor">{{speaker.sessions[0].id}}</ion-badge>
+            </div>
+        </ion-item>
+    </ion-list>
+
+    <ion-list [virtualScroll]="speakers">
+        <ion-grid fixed>
+            <ion-row align-items-stretch>
+
+                <ion-col col-12 col-md-6 align-self-stretch align-self-center *virtualItem="let speaker" approxItemHeight="457px">
+
+                    <ion-card class="speaker-card">
+                        <ion-card-header>
+                            <button ion-item detail-none (click)="goToSpeakerDetail(speaker)">
+                                <ion-avatar item-start>
+                                    <img [src]="speaker.profilePic" alt="Speaker profile pic">
+                                </ion-avatar>
+                                {{speaker.name}}
+                            </button>
+                        </ion-card-header>
+
+                        <ion-card-content class="outer-content">
+                            <ion-list>
+                                <button ion-item *ngFor="let session of speaker.sessions" (click)="goToSessionDetail(session)">
+                                    <h3>{{session.name}}</h3>
+                                </button>
+
+                                <button ion-item (click)="goToSpeakerDetail(speaker)">
+                                    <h3>About {{speaker.name}}</h3>
+                                </button>
+                            </ion-list>
+                        </ion-card-content>
+
+                        <ion-row no-padding>
+                            <ion-col col-12 col-lg-auto text-center text-lg-left>
+                                <button ion-button clear small color="primary" icon-start (click)="goToSpeakerTwitter(speaker)">
+                                    <ion-icon name="logo-twitter"></ion-icon>
+                                Tweet
+                                </button>
+                            </ion-col>
+                            <ion-col col-12 col-lg-auto text-center>
+                                <button ion-button clear small color="primary" icon-start (click)="openSpeakerShare(speaker)">
+                                    <ion-icon name='share-alt'></ion-icon>
+                                Share
+                                </button>
+                            </ion-col>
+                            <ion-col col-12 col-lg-auto text-center text-lg-right>
+                                <button ion-button clear small color="primary" icon-start (click)="openContact(speaker)">
+                                    <ion-icon name='chatboxes'></ion-icon>
+                                Contact
+                                </button>
+                            </ion-col>
+                        </ion-row>
+
+                    </ion-card>
+
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-list>
+</ion-content>

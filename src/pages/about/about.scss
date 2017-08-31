@@ -1,0 +1,77 @@
+.about-header {
+    background-color: #434954;
+    padding: 16px;
+    width: 100%;
+    min-height: 150px;
+    text-align: center;
+}
+
+.about-header img {
+    max-width: 200px;
+    min-height: 115px;
+    margin-left: -15px;
+    padding: 25px 0 20px 0;
+}
+
+.about-info p {
+    color: #697072;
+    text-align: left;
+}
+
+.about-info ion-icon {
+    color: color($colors, primary);
+    width: 20px;
+}
+
+.md,
+.wp {
+    .about-info [text-right] {
+        margin-right: 0;
+    }
+}
+
+.ios .about-info {
+    text-align: center;
+}
+
+.ios .about-info ion-icon {
+    width: auto;
+    margin-right: 10px;
+}
+
+page-about {
+    .list-ios .item-block .item-inner {
+        border-bottom: none;
+    }
+    .item-ios.item-block .item-inner {
+        border-bottom: none;
+    }
+    .bar-button-default-ios,
+    .bar-button-default.bar-button-ios-default,
+    .bar-button-clear-ios-default {
+        color: #fff;
+        font-size: 22px;
+    }
+    .list-bottom {
+        border-bottom: 1px solid #dfe3e2;
+    }
+    .list-img-radius {
+        border-radius: 28px;
+        overflow: hidden;
+    }
+    .item-box {
+        display: flex;
+    }
+    .item-box-right {
+        display: inline-block;
+    }
+    .right-time {
+        color: #878787;
+        font-size: 14px;
+        padding-bottom: 15px;
+    }
+    .badge-bgcolor {
+        background-color: #81e1ed;
+        float: right;
+    }
+}

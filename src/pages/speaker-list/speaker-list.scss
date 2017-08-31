@@ -1,0 +1,65 @@
+page-speaker-list {
+    .scroll-content {
+        background: #ededed;
+    }
+    .speaker-card {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        ion-card-content {
+            flex: 1 1 auto;
+        }
+        .bar-button-default-ios,
+        .bar-button-default.bar-button-ios-default,
+        .bar-button-clear-ios-default {
+            color: #fff;
+        }
+        .speaker-card ion-card-header .item {
+            padding: 4px 16px;
+        }
+        .speaker-card ion-card-content {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+    .bar-button-default-ios,
+    .bar-button-default.bar-button-ios-default,
+    .bar-button-clear-ios-default {
+        color: #fff;
+    }
+    .list-bottom {
+        border-bottom: 1px solid #dfe3e2;
+    }
+    .list-img-radius {
+        border-radius: 28px;
+        overflow: hidden;
+    }
+    .item-box {
+        display: flex;
+    }
+    .item-box-right {
+        display: inline-block;
+    }
+    .right-time {
+        color: #878787;
+        font-size: 14px;
+        padding-bottom: 15px;
+    }
+    .badge-bgcolor {
+        background-color: #81e1ed;
+        float: right;
+    }
+}
+
+// Todo: remove when this issue https://github.com/ionic-team/ionic/issues/11212 is fixed
+@media (min-width: 769px) {
+    .speaker-card {
+        height: 370px;
+    }
+}
+
+.item-block {
+    -webkit-box-align: none !important;
+    -webkit-align-items: none !important;
+    align-items: none !important;
+}
