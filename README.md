@@ -1,7 +1,8 @@
 download the project and then
 CLI:
 npm i
-npm serve
+
+ionic serve
 
 default browser preview:
 
